@@ -39,6 +39,12 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const isAdmin = true; //This will be replaced with actual role check
+
+  const allMenuItems = [...menuItems];
+  if(isAdmin) {
+    // allMenuItems.push({ href: "/admin", label: "Admin", icon: Shield });
+  }
 
   return (
     <SidebarProvider>
@@ -52,7 +58,7 @@ export default function DashboardLayout({
             <SidebarRail />
             <SidebarContent className="p-2">
                 <SidebarMenu>
-                    {menuItems.map((item) => (
+                    {allMenuItems.map((item) => (
                         <SidebarMenuItem key={item.href}>
                             <Link href={item.href} prefetch={true}>
                                 <SidebarMenuButton 

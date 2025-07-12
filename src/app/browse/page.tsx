@@ -4,9 +4,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from "lucide-react";
 import { mockItems } from "@/lib/data";
 import ItemCard from "@/components/ItemCard";
+import DashboardLayout from "../dashboard/layout";
 
 export default function BrowsePage() {
   return (
+    <DashboardLayout>
     <div className="space-y-12">
       <section className="text-center py-16 md:py-24 bg-accent/30 rounded-lg -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">Give Your Wardrobe a Second Life</h1>
@@ -55,5 +57,6 @@ export default function BrowsePage() {
         </div>
       </section>
     </div>
+    </DashboardLayout>
   );
 }
