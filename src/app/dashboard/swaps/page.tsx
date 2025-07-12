@@ -12,19 +12,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Check, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import CelebrationAnimation from "@/components/CelebrationAnimation";
+import DeclineAnimation from "@/components/DeclineAnimation";
 
 export default function SwapsPage() {
     const [swaps, setSwaps] = useState<SwapRequest[]>(initialSwaps);
-    const [showAnimation, setShowAnimation] = useState(false);
+    const [showCelebration, setShowCelebration] = useState(false);
+    const [showDecline, setShowDecline] = useState(false);
     const currentUser = mockUsers[0];
 
     const handleAccept = (swapId: string) => {
         setSwaps(prevSwaps => prevSwaps.map(s => s.id === swapId ? { ...s, status: 'accepted' } : s));
-        setShowAnimation(true);
+        setShowCelebration(true);
     };
 
     const handleDecline = (swapId: string) => {
         setSwaps(prevSwaps => prevSwaps.map(s => s.id === swapId ? { ...s, status: 'declined' } : s));
+        setShowDecline(true);
     };
 
     const incomingSwaps = swaps.filter(swap => swap.ownerId === currentUser.id);
@@ -74,7 +77,8 @@ export default function SwapsPage() {
 
     return (
         <div className="space-y-8">
-            {showAnimation && <CelebrationAnimation onComplete={() => setShowAnimation(false)} />}
+            {showCelebration && <CelebrationAnimation onComplete={() => setShowCelebration(false)} />}
+            {showDecline && <DeclineAnimation onComplete={() => setShowDecline(false)} />}
             <div>
                 <h1 className="text-3xl font-bold font-headline">Swaps</h1>
                 <p className="text-muted-foreground">Manage your swap requests.</p>
