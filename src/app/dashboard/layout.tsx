@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 
 const menuItems = [
-    { href: "/browse", label: "Home", icon: Home },
+    { href: "/dashboard/browse", label: "Home", icon: Home },
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/dashboard/items", label: "My Items", icon: Shirt },
     { href: "/dashboard/swaps", label: "Swaps", icon: HeartHandshake, badge: 3 },
@@ -62,7 +62,7 @@ export default function DashboardLayout({
                         <SidebarMenuItem key={item.href}>
                             <Link href={item.href} prefetch={true}>
                                 <SidebarMenuButton 
-                                    isActive={pathname.startsWith(item.href) && (item.href !== '/dashboard' || pathname === '/dashboard') && (item.href !== '/browse' || pathname === '/browse')}
+                                    isActive={pathname.startsWith(item.href) && (item.href !== '/dashboard' || pathname === '/dashboard')}
                                     tooltip={{children: item.label, side: "right"}}
                                 >
                                     <item.icon />
