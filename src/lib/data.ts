@@ -4,7 +4,7 @@ export const mockUsers: User[] = [
   {
     id: 'user1',
     name: 'Alice',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8fHwxNzUyMzAxODI5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2RlbHxlbnwwfHx8fDE3NTIzMDE4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     location: 'New York, NY',
     memberSince: new Date('2023-01-15'),
     points: 1250,
@@ -28,7 +28,7 @@ export const mockItems: Item[] = [
     condition: 'Excellent',
     size: 'M',
     images: [
-      'https://images.unsplash.com/photo-1543087904-142c792e4752?q=80&w=600&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1551028719-00167b16eac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxKYWNrZXR8ZW58MHx8fHwxNzUyMzAxOTI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1595950653106-6c9ebd614d34?q=80&w=600&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1605902711622-cfb4c194ea38?q=80&w=600&auto=format&fit=crop',
     ],
