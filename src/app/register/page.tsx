@@ -4,8 +4,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-
 
 const GoogleIcon = () => (
     <svg className="h-5 w-5" viewBox="0 0 24 24">
@@ -34,13 +32,31 @@ const GoogleIcon = () => (
     </svg>
   );
 
+const RegisterIcon = () => (
+    <svg 
+        className="h-24 w-24 text-muted-foreground"
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="1" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+    >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <line x1="19" x2="19" y1="8" y2="14"/>
+        <line x1="22" x2="16" y1="11" y2="11"/>
+    </svg>
+);
+
+
 export default function RegisterPage() {
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
            <div className="flex justify-center mb-4">
-             <Image src="https://placehold.co/100x100.png" alt="Profile Avatar" width={100} height={100} className="rounded-full" data-ai-hint="profile avatar"/>
+             <RegisterIcon />
           </div>
           <CardTitle className="text-2xl font-headline">Join ReWear Hub</CardTitle>
           <CardDescription>Create an account to start swapping and saving the planet.</CardDescription>
