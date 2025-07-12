@@ -20,6 +20,7 @@ import {
     UserCircle,
     LogOut,
     Badge,
+    Shield,
 } from "lucide-react";
 
 const menuItems = [
@@ -27,6 +28,7 @@ const menuItems = [
     { href: "/dashboard/items", label: "My Items", icon: Shirt },
     { href: "/dashboard/swaps", label: "Swaps", icon: HeartHandshake, badge: 3 },
     { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
+    { href: "/admin", label: "Admin", icon: Shield },
 ];
 
 export default function DashboardLayout({
@@ -46,7 +48,7 @@ export default function DashboardLayout({
                         <SidebarMenuItem key={item.href}>
                             <Link href={item.href}>
                                 <SidebarMenuButton 
-                                    isActive={pathname === item.href}
+                                    isActive={pathname.startsWith(item.href) && (item.href !== '/dashboard' || pathname === '/dashboard')}
                                     tooltip={{children: item.label, side: "right"}}
                                 >
                                     <item.icon />
