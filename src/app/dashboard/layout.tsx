@@ -28,7 +28,7 @@ const menuItems = [
     { href: "/dashboard/items", label: "My Items", icon: Shirt },
     { href: "/dashboard/swaps", label: "Swaps", icon: HeartHandshake, badge: 3 },
     { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
-    { href: "/admin", label: "Admin", icon: Shield },
+    // { href: "/admin", label: "Admin", icon: Shield },
 ];
 
 export default function DashboardLayout({
@@ -37,6 +37,14 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  // A simple flag to determine if the user is an admin.
+  // In a real app, this would be based on user roles from your auth system.
+  const isAdmin = false; 
+
+  const visibleMenuItems = isAdmin 
+    ? [...menuItems, { href: "/admin", label: "Admin", icon: Shield }] 
+    : menuItems;
+
 
   return (
     <SidebarProvider>
@@ -44,7 +52,7 @@ export default function DashboardLayout({
         <Sidebar>
             <SidebarContent className="p-2">
                 <SidebarMenu>
-                    {menuItems.map((item) => (
+                    {visibleMenuItems.map((item) => (
                         <SidebarMenuItem key={item.href}>
                             <Link href={item.href}>
                                 <SidebarMenuButton 
