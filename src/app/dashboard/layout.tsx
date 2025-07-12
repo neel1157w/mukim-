@@ -12,6 +12,7 @@ import {
   SidebarFooter,
   SidebarTrigger,
   SidebarInset,
+  SidebarRail,
 } from "@/components/ui/sidebar";
 import {
     Home,
@@ -42,7 +43,13 @@ export default function DashboardLayout({
   return (
     <SidebarProvider>
         <div className="flex min-h-[calc(100vh-4rem)]">
-        <Sidebar>
+        <Sidebar collapsible="icon">
+             <SidebarHeader className="p-2">
+                <div className="flex h-8 items-center justify-between">
+                    <SidebarTrigger />
+                </div>
+            </SidebarHeader>
+            <SidebarRail />
             <SidebarContent className="p-2">
                 <SidebarMenu>
                     {menuItems.map((item) => (
