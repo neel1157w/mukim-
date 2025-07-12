@@ -47,6 +47,7 @@ export default function Footer() {
         </div>
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} ReWear Hub. All Rights Reserved.</p>
+          <p className="mt-2">Made with ❤️ by FourLoopers for Odoo Hackathon</p>
         </div>
       </div>
     </footer>
