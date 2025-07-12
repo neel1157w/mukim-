@@ -74,7 +74,7 @@ export const mockItems: Item[] = [
   },
     {
     id: 'item5',
-    name: 'High-Waisted Trousers',
+    name: 'High Waisted Leggings',
     description: 'Elegant beige high-waisted trousers. Perfect for office or casual smart look.',
     category: 'Bottoms',
     condition: 'Excellent',
