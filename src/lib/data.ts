@@ -79,7 +79,7 @@ export const mockItems: Item[] = [
     category: 'Bottoms',
     condition: 'Excellent',
     size: 'UK 10',
-    images: ['https://images.unsplash.com/photo-1594623930334-a849c85319b3?q=80&w=600&auto=format&fit=crop'],
+    images: ['https://images.unsplash.com/photo-1596755094514-f87e34085b2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzaGlydCUyMHxlbnwwfHx8fDE3NTIzMDIxNTF8MA&ixlib=rb-4.1.0&q=80&w=1080'],
     points: 280,
     tags: ['trousers', 'high-waisted', 'smart casual'],
     userId: 'user1',
