@@ -88,15 +88,22 @@ export default {
             height: '0',
           },
         },
-        'fade-out': {
+        'celebration-pop': {
+          '0%': { transform: 'scale(0.5)', opacity: '0' },
+          '50%': { transform: 'scale(1.1)', opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        'celebration-fade': {
           '0%': { opacity: '1' },
+          '80%': { opacity: '1' },
           '100%': { opacity: '0' },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-out': 'fade-out 1s ease-out forwards',
+        'celebration-pop': 'celebration-pop 0.5s ease-out forwards',
+        'celebration-fade': 'celebration-fade 2s ease-in-out forwards',
       },
     },
   },

@@ -17,8 +17,8 @@ export default function CelebrationAnimation({ onComplete }: { onComplete: () =>
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm animate-fade-out" style={{animationDuration: '2s'}}>
-      <div className="text-6xl md:text-8xl animate-bounce">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm animate-celebration-fade">
+      <div className="text-6xl md:text-8xl animate-celebration-pop">
         🥳🎉
       </div>
     </div>
