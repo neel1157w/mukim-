@@ -1,19 +1,36 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { mockItems, mockUsers, mockSwaps } from "@/lib/data";
+import { mockItems, mockUsers, mockSwaps as initialSwaps } from "@/lib/data";
+import type { SwapRequest } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Check, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import CelebrationAnimation from "@/components/CelebrationAnimation";
 
 export default function SwapsPage() {
+    const [swaps, setSwaps] = useState<SwapRequest[]>(initialSwaps);
+    const [showAnimation, setShowAnimation] = useState(false);
     const currentUser = mockUsers[0];
-    const incomingSwaps = mockSwaps.filter(swap => swap.ownerId === currentUser.id);
-    const outgoingSwaps = mockSwaps.filter(swap => swap.requesterId === currentUser.id);
 
-    const SwapRequestCard = ({ swap, type }: { swap: (typeof mockSwaps)[0], type: 'incoming' | 'outgoing' }) => {
+    const handleAccept = (swapId: string) => {
+        setSwaps(prevSwaps => prevSwaps.map(s => s.id === swapId ? { ...s, status: 'accepted' } : s));
+        setShowAnimation(true);
+    };
+
+    const handleDecline = (swapId: string) => {
+        setSwaps(prevSwaps => prevSwaps.map(s => s.id === swapId ? { ...s, status: 'declined' } : s));
+    };
+
+    const incomingSwaps = swaps.filter(swap => swap.ownerId === currentUser.id);
+    const outgoingSwaps = swaps.filter(swap => swap.requesterId === currentUser.id);
+
+    const SwapRequestCard = ({ swap, type }: { swap: SwapRequest, type: 'incoming' | 'outgoing' }) => {
         const item = mockItems.find(i => i.id === swap.itemId);
         const otherUser = mockUsers.find(u => u.id === (type === 'incoming' ? swap.requesterId : swap.ownerId));
         if (!item || !otherUser) return null;
@@ -43,8 +60,8 @@ export default function SwapsPage() {
                 <div className="flex items-center gap-2">
                     {swap.status === 'pending' && type === 'incoming' && (
                         <>
-                        <Button size="icon" variant="outline" className="h-8 w-8 text-green-600 hover:text-green-600 hover:bg-green-50"><Check className="h-4 w-4"/></Button>
-                        <Button size="icon" variant="outline" className="h-8 w-8 text-red-600 hover:text-red-600 hover:bg-red-50"><X className="h-4 w-4"/></Button>
+                        <Button onClick={() => handleAccept(swap.id)} size="icon" variant="outline" className="h-8 w-8 text-green-600 hover:text-green-600 hover:bg-green-50"><Check className="h-4 w-4"/></Button>
+                        <Button onClick={() => handleDecline(swap.id)} size="icon" variant="outline" className="h-8 w-8 text-red-600 hover:text-red-600 hover:bg-red-50"><X className="h-4 w-4"/></Button>
                         </>
                     )}
                      {swap.status !== 'pending' && (
@@ -57,6 +74,7 @@ export default function SwapsPage() {
 
     return (
         <div className="space-y-8">
+            {showAnimation && <CelebrationAnimation onComplete={() => setShowAnimation(false)} />}
             <div>
                 <h1 className="text-3xl font-bold font-headline">Swaps</h1>
                 <p className="text-muted-foreground">Manage your swap requests.</p>
