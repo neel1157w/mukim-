@@ -62,15 +62,6 @@ export default function RegisterPage() {
           <CardDescription>Create an account to start swapping and saving the planet.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-                <Button variant="outline"><GoogleIcon /> Google</Button>
-                <Button variant="outline"><FacebookIcon /> Facebook</Button>
-            </div>
-            <div className="flex items-center gap-4">
-                <Separator className="flex-1"/>
-                <span className="text-xs text-muted-foreground">OR</span>
-                <Separator className="flex-1"/>
-            </div>
           <div className="space-y-2">
             <Label htmlFor="name">Full Name</Label>
             <Input id="name" type="text" placeholder="Your Name" required />
@@ -86,6 +77,18 @@ export default function RegisterPage() {
         </CardContent>
         <CardFooter className="flex flex-col gap-4">
           <Button className="w-full">Create Account</Button>
+          
+           <div className="w-full flex items-center gap-4">
+                <Separator className="flex-1"/>
+                <span className="text-xs text-muted-foreground">OR</span>
+                <Separator className="flex-1"/>
+            </div>
+
+            <div className="w-full grid grid-cols-2 gap-4">
+                <Button variant="outline"><GoogleIcon /> Google</Button>
+                <Button variant="outline"><FacebookIcon /> Facebook</Button>
+            </div>
+
           <div className="text-center text-sm text-muted-foreground">
             Already have an account?{" "}
             <Link href="/login" className="font-medium text-primary hover:underline">
