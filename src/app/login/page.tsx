@@ -5,28 +5,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const UserIcon = () => (
-    <svg
-        className="h-24 w-24"
-        viewBox="0 0 100 100"
-        fill="none"
+    <svg 
+        className="h-24 w-24 text-foreground" 
+        viewBox="0 0 24 24" 
+        fill="currentColor" 
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50" cy="50" r="50" fill="#4285F4" />
-        <path
-            d="M50 45C58.2843 45 65 38.2843 65 30C65 21.7157 58.2843 15 50 15C41.7157 15 35 21.7157 35 30C35 38.2843 41.7157 45 50 45Z"
-            fill="white"
-        />
-        <path
-            d="M75 85.0001C75 71.193 63.8071 60.0001 50 60.0001C36.1929 60.0001 25 71.193 25 85.0001H75Z"
-            fill="white"
-        />
+        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
     </svg>
 );
 
 
 export default function LoginPage() {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12">
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
            <div className="flex justify-center mb-4">
