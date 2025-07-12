@@ -56,7 +56,7 @@ export default function DashboardLayout({
                 <SidebarMenu>
                     {visibleMenuItems.map((item) => (
                         <SidebarMenuItem key={item.href}>
-                            <Link href={item.href}>
+                            <Link href={item.href} prefetch={true}>
                                 <SidebarMenuButton 
                                     isActive={pathname.startsWith(item.href) && (item.href !== '/dashboard' || pathname === '/dashboard') && (item.href !== '/browse' || pathname === '/browse')}
                                     tooltip={{children: item.label, side: "right"}}

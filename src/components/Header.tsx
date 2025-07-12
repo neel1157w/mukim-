@@ -25,6 +25,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              prefetch={true}
               className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
@@ -34,13 +35,13 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-2">
           <Button variant="ghost" asChild>
-            <Link href="/login">Log In</Link>
+            <Link href="/login" prefetch={true}>Log In</Link>
           </Button>
           <Button asChild>
-            <Link href="/register">Register</Link>
+            <Link href="/register" prefetch={true}>Register</Link>
           </Button>
           <Button variant="outline" className="ml-2" asChild>
-            <Link href="/submit-item">Submit Item</Link>
+            <Link href="/submit-item" prefetch={true}>Submit Item</Link>
           </Button>
         </div>
 
@@ -63,6 +64,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      prefetch={true}
                       className="text-base font-medium text-foreground/80 transition-colors hover:text-primary"
                     >
                       {link.label}
@@ -71,13 +73,13 @@ export default function Header() {
                 </nav>
                 <div className="border-t pt-6 flex flex-col gap-2">
                     <Button variant="outline" asChild>
-                        <Link href="/submit-item">Submit Item</Link>
+                        <Link href="/submit-item" prefetch={true}>Submit Item</Link>
                     </Button>
                     <Button variant="ghost" asChild>
-                        <Link href="/login">Log In</Link>
+                        <Link href="/login" prefetch={true}>Log In</Link>
                     </Button>
                     <Button asChild>
-                        <Link href="/register">Register</Link>
+                        <Link href="/register" prefetch={true}>Register</Link>
                     </Button>
                 </div>
               </div>
