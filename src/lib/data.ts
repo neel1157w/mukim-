@@ -12,7 +12,7 @@ export const mockUsers: User[] = [
   {
     id: 'user2',
     name: 'Bob',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop',
     location: 'Los Angeles, CA',
     memberSince: new Date('2023-03-22'),
     points: 800,
