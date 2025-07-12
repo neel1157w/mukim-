@@ -115,7 +115,7 @@ export const mockItems: Item[] = [
     category: 'Bottoms',
     condition: 'Excellent',
     size: 'M',
-    images: ['https://images.unsplash.com/photo-1617114919956-655f415c1056?q=80&w=600&auto=format&fit=crop'],
+    images: ['https://images.unsplash.com/photo-1593263049629-a6bbe863049f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaG9ydHN8ZW58MHx8fHwxNzUyMzAzMDU3fDA&ixlib=rb-4.1.0&q=80&w=1080'],
     points: 150,
     tags: ['linen', 'shorts', 'summer', 'casual'],
     userId: 'user2',
