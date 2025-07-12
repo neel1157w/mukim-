@@ -26,12 +26,12 @@ export default function DashboardOverview() {
             <Card className="overflow-hidden">
                 <div className="relative">
                     <Image 
-                        src="https://placehold.co/1200x400.png"
+                        src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdyYWRpZW50fGVufDB8fHx8MTc1MjMxNTM1OXww&ixlib=rb-4.1.0&q=80&w=1080"
                         alt="Cover photo"
                         width={1200}
-                        height={400}
-                        className="w-full h-48 object-cover"
-                        data-ai-hint="abstract landscape"
+                        height={200}
+                        className="w-full h-32 object-cover"
+                        data-ai-hint="abstract gradient"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute bottom-0 left-0 p-6 flex items-end gap-4">
