@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
   return (
-    <div className="flex items-center justify-center py-12 md:py-24">
+    <div className="flex items-center justify-center min-h-[calc(100vh-8rem)] py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-headline">Welcome Back!</CardTitle>
@@ -29,7 +29,7 @@ export default function LoginPage() {
           <div className="text-center text-sm text-muted-foreground">
             Don&apos;t have an account?{" "}
             <Link href="/register" className="font-medium text-primary hover:underline">
-              Sign Up
+              Register
             </Link>
           </div>
         </CardFooter>

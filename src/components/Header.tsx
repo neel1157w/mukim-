@@ -37,7 +37,7 @@ export default function Header() {
             <Link href="/login">Log In</Link>
           </Button>
           <Button asChild>
-            <Link href="/register">Sign Up</Link>
+            <Link href="/register">Register</Link>
           </Button>
           <Button variant="outline" className="ml-2" asChild>
             <Link href="/submit-item">Submit Item</Link>
@@ -77,7 +77,7 @@ export default function Header() {
                         <Link href="/login">Log In</Link>
                     </Button>
                     <Button asChild>
-                        <Link href="/register">Sign Up</Link>
+                        <Link href="/register">Register</Link>
                     </Button>
                 </div>
               </div>
