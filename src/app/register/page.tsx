@@ -35,11 +35,13 @@ const GoogleIcon = () => (
 
 export default function RegisterPage() {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12">
+    <div className="flex items-center justify-center min-h-screen bg-background py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
            <div className="flex justify-center mb-4">
-             <UserPlus className="h-20 w-20 text-muted-foreground" />
+              <div className="bg-primary/10 p-4 rounded-full">
+                <UserPlus className="h-16 w-16 text-primary" />
+              </div>
           </div>
           <CardTitle className="text-2xl font-headline">Join ReWear Hub</CardTitle>
           <CardDescription>Create an account to start swapping and saving the planet.</CardDescription>

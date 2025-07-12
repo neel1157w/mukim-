@@ -7,11 +7,13 @@ import { User } from "lucide-react";
 
 export default function LoginPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-background">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
            <div className="flex justify-center mb-4">
-            <User className="h-20 w-20 text-muted-foreground" />
+            <div className="bg-primary/10 p-4 rounded-full">
+              <User className="h-16 w-16 text-primary" />
+            </div>
           </div>
           <CardTitle className="text-2xl font-headline">Welcome Back!</CardTitle>
           <CardDescription>Log in to continue your sustainable fashion journey.</CardDescription>

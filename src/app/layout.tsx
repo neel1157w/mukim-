@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const hideHeaderFooter = ['/', '/login', '/register'].includes(pathname);
+  const hideHeaderFooter = ['/login', '/register'].includes(pathname);
 
   return (
     <html lang="en" suppressHydrationWarning>
