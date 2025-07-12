@@ -1,7 +1,6 @@
 
 "use client"
 import type { Metadata } from 'next';
-import { usePathname } from 'next/navigation';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import Footer from '@/components/Footer';
@@ -16,8 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const hideHeaderFooter = ['/login', '/register'].includes(pathname);
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -30,10 +27,10 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <div className="flex flex-col min-h-screen">
-          <main className={`flex-grow ${!hideHeaderFooter ? 'container mx-auto px-4 sm:px-6 lg:px-8' : ''}`}>
+          <main className={`flex-grow container mx-auto px-4 sm:px-6 lg:px-8`}>
             {children}
           </main>
-          {!hideHeaderFooter && <Footer />}
+          <Footer />
         </div>
         <Toaster />
       </body>
