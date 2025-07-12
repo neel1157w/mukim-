@@ -4,7 +4,7 @@ export const mockUsers: User[] = [
   {
     id: 'user1',
     name: 'Alice',
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2RlbHxlbnwwfHx8fDE3NTIzMDE4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    avatar: 'https://images.unsplash.com/photo-1553984658-d17e19aa281a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxGYXNoaW9uJTIwbW9kZWwlMjB8ZW58MHx8fHwxNzUyMzA3NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     location: 'New York, NY',
     memberSince: new Date('2023-01-15'),
     points: 1250,

@@ -26,7 +26,7 @@ export default function DashboardOverview() {
             <Card>
                 <CardHeader className="flex flex-col md:flex-row gap-6 space-y-0">
                     <Avatar className="h-24 w-24 border">
-                        <AvatarImage src={user.avatar} alt={user.name} data-ai-hint="person" />
+                        <AvatarImage src={user.avatar} alt={user.name} data-ai-hint="person" className="object-cover" />
                         <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div className="space-y-1.5 flex-grow">
