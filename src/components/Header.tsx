@@ -6,9 +6,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Shirt } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Browse" },
-  { href: "/#about", label: "About" },
-  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/browse", label: "Browse" },
+  { href: "/browse#about", label: "About" },
+  { href: "/browse#how-it-works", label: "How It Works" },
 ];
 
 export default function Header() {
