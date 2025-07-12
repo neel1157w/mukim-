@@ -4,9 +4,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { UserPlus } from "lucide-react";
 
 const GoogleIcon = () => (
-    <svg className="h-5 w-5" viewBox="0 0 24 24">
+    <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24">
       <path
         d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
         fill="#4285F4"
@@ -27,28 +28,10 @@ const GoogleIcon = () => (
   );
   
   const FacebookIcon = () => (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#1877F2">
+    <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="#1877F2">
         <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v7.028C18.343 21.128 22 16.991 22 12z"></path>
     </svg>
   );
-
-const RegisterIcon = () => (
-    <svg 
-        className="h-24 w-24 text-muted-foreground"
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="1" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-    >
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <line x1="19" x2="19" y1="8" y2="14"/>
-        <line x1="22" x2="16" y1="11" y2="11"/>
-    </svg>
-);
-
 
 export default function RegisterPage() {
   return (
@@ -56,7 +39,7 @@ export default function RegisterPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
            <div className="flex justify-center mb-4">
-             <RegisterIcon />
+             <UserPlus className="h-20 w-20 text-muted-foreground" />
           </div>
           <CardTitle className="text-2xl font-headline">Join ReWear Hub</CardTitle>
           <CardDescription>Create an account to start swapping and saving the planet.</CardDescription>
