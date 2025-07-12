@@ -29,7 +29,7 @@ const menuItems = [
     { href: "/dashboard/browse", label: "Home", icon: Home },
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/dashboard/items", label: "My Items", icon: Shirt },
-    { href: "/dashboard/swaps", label: "Swaps", icon: HeartHandshake, badge: 3 },
+    { href: "/dashboard/swaps", label: "Swaps", icon: HeartHandshake },
     { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
 ];
 
