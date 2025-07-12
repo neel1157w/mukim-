@@ -41,7 +41,7 @@ export default function DashboardLayout({
   const pathname = usePathname();
   // A simple flag to determine if the user is an admin.
   // In a real app, this would be based on user roles from your auth system.
-  const isAdmin = false; 
+  const isAdmin = true; 
 
   const visibleMenuItems = isAdmin 
     ? [...menuItems, { href: "/admin", label: "Admin", icon: Shield }] 
