@@ -25,6 +25,8 @@ export default function SwapsPage() {
                         alt={item.name}
                         className="aspect-square rounded-md object-cover h-16 w-16"
                         src={item.images[0]}
+                        width={64}
+                        height={64}
                         data-ai-hint="clothing item"
                     />
                     <div>
