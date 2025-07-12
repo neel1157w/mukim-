@@ -23,34 +23,40 @@ export default function DashboardOverview() {
                 </Button>
             </div>
             
-            <Card className="overflow-hidden">
+            <Card>
                 <div className="relative">
                     <Image 
                         src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdyYWRpZW50fGVufDB8fHx8MTc1MjMxNTM1OXww&ixlib=rb-4.1.0&q=80&w=1080"
                         alt="Cover photo"
                         width={1200}
                         height={200}
-                        className="w-full h-32 object-cover"
+                        className="w-full h-32 object-cover rounded-t-lg"
                         data-ai-hint="abstract gradient"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-6 flex items-end gap-4">
+                </div>
+                <CardContent className="p-6 text-center">
+                    <div className="flex justify-center -mt-16">
                          <Avatar className="h-24 w-24 border-4 border-background bg-background">
                             <AvatarImage src={user.avatar} alt={user.name} data-ai-hint="person" className="object-cover" />
                             <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <div>
-                            <h2 className="text-2xl font-bold text-primary-foreground">{user.name}</h2>
-                            <p className="text-sm text-primary-foreground/80">alice@example.com</p>
-                        </div>
                     </div>
-                </div>
-                <CardContent className="p-6">
-                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2 text-sm">
-                        <div><span className="font-semibold text-foreground">Points:</span> {user.points} pts</div>
-                        <div><span className="font-semibold text-foreground">Member Since:</span> {user.memberSince.toLocaleDateString()}</div>
-                        <div><span className="font-semibold text-foreground">Items Listed:</span> {userItems.length}</div>
-                        <div><span className="font-semibold text-foreground">Completed Swaps:</span> {completedSwaps.length}</div>
+                     <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
+                     <p className="text-sm text-muted-foreground">alice@example.com</p>
+
+                     <div className="grid grid-cols-3 gap-4 pt-6 text-sm">
+                        <div className="space-y-1">
+                            <p className="font-semibold text-foreground">{user.points}</p>
+                            <p className="text-xs text-muted-foreground">Points</p>
+                        </div>
+                        <div className="space-y-1">
+                             <p className="font-semibold text-foreground">{userItems.length}</p>
+                            <p className="text-xs text-muted-foreground">Items Listed</p>
+                        </div>
+                        <div className="space-y-1">
+                           <p className="font-semibold text-foreground">{completedSwaps.length}</p>
+                           <p className="text-xs text-muted-foreground">Swaps</p>
+                        </div>
                     </div>
                 </CardContent>
             </Card>
