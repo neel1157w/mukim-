@@ -31,7 +31,7 @@ export default function SwapsPage() {
                         <Link href={`/item/${item.id}`} className="font-semibold hover:underline">{item.name}</Link>
                         <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
                             <Avatar className="h-6 w-6">
-                                <AvatarImage src={otherUser.avatar} alt={otherUser.name} />
+                                <AvatarImage src={otherUser.avatar} alt={otherUser.name} data-ai-hint="person" />
                                 <AvatarFallback>{otherUser.name.charAt(0)}</AvatarFallback>
                             </Avatar>
                             <span>{type === 'incoming' ? `Request from ${otherUser.name}` : `Request to ${otherUser.name}`}</span>

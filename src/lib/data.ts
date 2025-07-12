@@ -29,8 +29,8 @@ export const mockItems: Item[] = [
     size: 'M',
     images: [
       'https://placehold.co/600x800.png',
-      'https://placehold.co/600x800.png',
-      'https://placehold.co/600x800.png',
+      'https://placehold.co/600x800/EFEFEF/31343C',
+      'https://placehold.co/600x800/EFEFEF/31343C',
     ],
     points: 300,
     tags: ['denim', 'vintage', '90s', 'jacket'],
